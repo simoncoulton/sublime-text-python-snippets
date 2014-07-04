@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+from watson.console import command, ConsoleError
+from watson.di import ContainerAware
+
+
+class ${1:Name}(command.Base, ContainerAware):
+    name = '${2:CLI Name}'
+    help = '${3:Description}'
+    arguments = [
+        (('-${4:Arg Letter}', '--${5:Arg Word}'), {'action': '${6:Action}',
+                              'help': '${7:Help String}',
+                              'const': 1}),
+    ]
+]]></content>
+    <tabTrigger>command</tabTrigger>
+    <scope>source.python</scope>
+</snippet>
